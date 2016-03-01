@@ -1,0 +1,20 @@
+body {
+  padding-top: 80px;
+}
+
+.header {
+  text-align: center;
+  padding: 20px 50px;
+}
+
+#header-text {
+  color: #fff;
+  font-weight: bold;
+}
+
+.validation-summary-errors ul { 
+    list-style: none;
+    margin-left:-40px
+}
+
+
