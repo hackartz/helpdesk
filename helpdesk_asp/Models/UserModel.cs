@@ -8,15 +8,11 @@ namespace helpdesk_asp.Models
 {
     public class UserModel
     {
-        public string userid { get; set; }
-        [Required(ErrorMessage = "Please input Username")]
-        [Display(Name = "UserName")]
+        public string userid { get; set; }        
         public string username { get; set; }
         public string roleid { get; set; }
         public string department { get; set; }
-        public string RoleName { get; set; }
-        [Required(ErrorMessage = "Please input Password")]
-        [Display(Name = "Password")]
+        public string RoleName { get; set; }        
         public byte[] password { get; set; }
     }
 

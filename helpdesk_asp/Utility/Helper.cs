@@ -6,8 +6,10 @@ using System.Web.Security;
 using System.Reflection;
 using System.Web.Mvc;
 using helpdesk_asp.Models;
+using System.Security.Cryptography;
+using System.Text;
 
-namespace startup_emr.Utility
+namespace helpdesk_asp.Utility
 {
     public static class Helper
     {
@@ -82,6 +84,23 @@ namespace startup_emr.Utility
             action = httpContext.RequestContext.RouteData.Values["action"].ToString();
             return action;
         }
+
+        public static byte[] Encrypt(string password)
+        {
+            try
+            {
+                SHA1CryptoServiceProvider obj = new SHA1CryptoServiceProvider();
+                SHA1CryptoServiceProvider.Create();
+
+                return obj.ComputeHash(Encoding.Unicode.GetBytes(password));
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
 
         
     }
