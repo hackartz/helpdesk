@@ -66,8 +66,8 @@ namespace helpdesk_asp.Controllers
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                return View(Helper.GetErrorView(),
+                    Helper.GetErrorModel(ex, this.Request));
             }
         }
     }
